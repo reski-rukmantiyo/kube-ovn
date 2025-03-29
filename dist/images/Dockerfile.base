@@ -30,7 +30,7 @@ RUN cd /usr/src/ && \
     curl -s https://github.com/kubeovn/ovs/commit/f9048a894c019cd4cf5587d40cc07054da60ec81.patch | git apply && \
     # ovsdb-tool: add command fix-cluster
     curl -s https://github.com/kubeovn/ovs/commit/f52c239f5ded40b503e4d217f916b46ca413da4c.patch | git apply && \
-    # ovs-router: skip getting source address for kube-ipvs0 & increase the default probe interval for large cluster kubeovn#4389
+    # increase the default probe interval for large cluster kubeovn#4389
     curl -s https://github.com/reski-rukmantiyo/ovs/commit/19bd10b13b6cdedb18d366b136f79763d4a5f398.patch | git apply
 
 RUN cd /usr/src/ && git clone -b branch-22.12 --depth=1 https://github.com/ovn-org/ovn.git && \
